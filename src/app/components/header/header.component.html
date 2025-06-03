@@ -1,0 +1,16 @@
+<mat-toolbar class="header" color="primary">
+  <div class="left">
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <span class="app-name">PlanTra</span>
+  </div>
+
+  <div class="right">
+    <button mat-icon-button aria-label="Profile">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+
+    <button mat-icon-button (click)="toggleSidenav.emit()" aria-label="Toggle SideNav">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

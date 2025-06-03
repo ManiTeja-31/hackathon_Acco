@@ -1,0 +1,9 @@
+<mat-card *ngFor="let person of people" class="profile-card">
+  <div class="profile-item">
+    <img [src]="person.img" alt="avatar" />
+    <div>
+      <div class="name">{{ person.name }}</div>
+      <div class="role">{{ person.role }}</div>
+    </div>
+  </div>
+</mat-card>

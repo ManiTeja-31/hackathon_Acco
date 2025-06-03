@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  height: 64px;
+
+  .left {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .app-name {
+      font-size: 20px;
+      font-weight: 600;
+      color: white;
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    mat-icon {
+      color: white;
+    }
+  }
+}
