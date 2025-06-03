@@ -1,15 +1,15 @@
-import { Component, Input, computed, Signal } from '@angular/core';
+import { Component, Input, Signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 
 interface Task {
   id: number;
   name: string;
-  duration?: string;
-  completed: boolean;
   started: boolean;
+  completed: boolean;
   startTime?: number;
   endTime?: number;
+  duration?: string;
 }
 
 @Component({

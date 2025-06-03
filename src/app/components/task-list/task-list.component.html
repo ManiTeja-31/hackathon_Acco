@@ -1,41 +1,35 @@
 <div class="task-container">
-  <mat-card
-    *ngFor="let task of tasks()"
-    [@fadeSlide]
-    class="task-card"
-  >
+  <mat-card *ngFor="let task of tasks()" class="task-card">
+  <div class="task-main">
     <div class="task-header">
       <mat-checkbox
+        [checked]="task.completed"
+        (change)="completeTask(task)"
         [disabled]="!task.started || task.completed"
-        [(ngModel)]="task.completed"
-        (change)="completeTask(task)">
-      </mat-checkbox>
-
-      <div class="task-info">
+      ></mat-checkbox>
+      <div class="task-details">
         <h3>{{ task.name }}</h3>
         <p>{{ task.description }}</p>
       </div>
-
-      <div class="task-actions">
-        <button
-          mat-raised-button
-          color="warn"
-          (click)="startTask(task)"
-          [disabled]="task.started"
-        >Start</button>
-
-        <button
-          mat-raised-button
-          color="primary"
-          (click)="extendTask(task)"
-        >Extend</button>
-      </div>
     </div>
 
-    <div class="task-footer" *ngIf="task.duration">
-      <mat-icon>access_time</mat-icon>
-      Duration: {{ task.duration }}
+    <div class="task-actions">
+      <button mat-raised-button color="warn" (click)="startTask(task)" [disabled]="task.started">
+        Start
+      </button>
+      <button mat-raised-button color="primary" (click)="extendTask(task)">
+        Extend
+      </button>
     </div>
-  </mat-card>
+  </div>
+
+  <div class="task-footer" *ngIf="task.duration">
+    <mat-icon>access_time</mat-icon>
+    Duration: {{ task.duration }}
+  </div>
+</mat-card>
+
+
+
   <app-task-duration-list [tasks]="tasks" />
 </div>
