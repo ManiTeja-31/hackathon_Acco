@@ -1,19 +1,26 @@
 <mat-sidenav-container class="container">
-      <!-- RIGHT SIDE DRAWER -->
-      <mat-sidenav
-        #drawer
-        mode="over"
-        position="end"
-        [opened]="sidenavOpen()"
-        (closedStart)="sidenavOpen.set(false)"
-      >
-        <app-sidenav-menu />
-      </mat-sidenav>
+  <!-- RIGHT SIDE DRAWER -->
+  <mat-sidenav
+    #drawer
+    mode="over"
+    position="end"
+    [opened]="sidenavOpen()"
+    (closedStart)="sidenavOpen.set(false)"
+  >
+    <app-sidenav-menu />
+  </mat-sidenav>
 
-      <mat-sidenav-content>
-        <app-header (toggleSidenav)="sidenavOpen.set(!sidenavOpen())" />
-        <div class="content">
-          <app-task-list></app-task-list>
-        </div>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
+  <mat-sidenav-content>
+    <app-header (toggleSidenav)="sidenavOpen.set(!sidenavOpen())" />
+    <div class="content">
+  <h1 class="clickable-title" >
+    Project Title: <span class="project-name" (click)="openDescriptionDialog()">E-commerce Website
+      <mat-icon class="info-icon" >info</mat-icon>
+    </span>
+    
+  </h1>
+
+  <app-task-list></app-task-list>
+</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

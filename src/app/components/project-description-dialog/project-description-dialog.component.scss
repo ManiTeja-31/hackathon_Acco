@@ -1,0 +1,29 @@
+.dialog-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+
+.dialog-body {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.dialog-actions {
+  margin-top: auto;
+  padding-bottom: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+button:hover{
+    background-color: rgb(255, 34, 0);
+}
+
+
