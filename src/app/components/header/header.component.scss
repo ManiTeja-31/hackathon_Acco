@@ -3,7 +3,7 @@
   justify-content: space-between;
   padding: 0 1rem;
   height: 64px;
-  background-image: linear-gradient(to right, #333841 , #444951);
+  background-image: linear-gradient(to right, #333841, #444951);
 
   .left {
     display: flex;
@@ -13,21 +13,36 @@
       height: 50px;
       margin-right: 10px;
     }
-
-    .app-name {
-      font-size: 20px;
-      font-weight: 600;
-      color: white;
-    }
   }
 
   .right {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 16px;
+
+    .progress-container {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      mat-progress-bar {
+        width: 80px;
+        height: 6px;
+        border-radius: 3px;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .progress-text {
+        font-size: 0.8rem;
+        color: white;
+        min-width: 30px;
+      }
+    }
 
     mat-icon {
       color: white;
     }
   }
 }
+
+

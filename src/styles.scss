@@ -53,3 +53,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
+
+.mat-progress-bar-fill {
+  background-color: #4caf50 !important;
+}
+
+.mat-progress-bar-buffer {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+

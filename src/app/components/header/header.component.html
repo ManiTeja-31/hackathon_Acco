@@ -1,10 +1,18 @@
-<mat-toolbar class="header" >
+<mat-toolbar class="header">
   <div class="left">
     <img src="assets/logo-3.png" alt="Logo" class="logo" />
-    <!-- <span class="app-name">PlanTra</span> -->
   </div>
 
   <div class="right">
+    <div class="progress-container">
+      <mat-progress-bar
+        mode="determinate"
+        [value]="progress"
+        color="primary"
+      ></mat-progress-bar>
+      <span class="progress-text">{{ progress }}%</span>
+    </div>
+
     <button mat-icon-button aria-label="Profile">
       <mat-icon>account_circle</mat-icon>
     </button>

@@ -14,13 +14,18 @@
     </div>
 
     <div class="task-actions">
-      <button mat-raised-button color="warn" (click)="startTask(task)" [disabled]="task.started">
-        Start
-      </button>
-      <button mat-raised-button color="primary" (click)="extendTask(task)">
-        Extend
-      </button>
-    </div>
+  <span class="estimated-time">
+    <mat-icon>schedule</mat-icon>
+    Est: {{ task.estimatedTime || '15 min' }}
+  </span>
+
+  <button mat-raised-button color="warn" (click)="startTask(task)" [disabled]="task.started">
+    Start
+  </button>
+  <button mat-raised-button color="primary" (click)="extendTask(task)">
+    Extend
+  </button>
+</div>
   </div>
 
   <div class="task-footer" *ngIf="task.duration">
@@ -28,8 +33,6 @@
     Duration: {{ task.duration }}
   </div>
 </mat-card>
-
-
 
   <app-task-duration-list [tasks]="tasks" />
 </div>

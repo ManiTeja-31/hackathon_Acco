@@ -40,4 +40,10 @@ export class AppComponent {
   });
 }
 
+taskCompletionPercent = signal(0);
+
+updateProgress(percent: number) {
+  this.taskCompletionPercent.set(percent);
+}
+
 }
