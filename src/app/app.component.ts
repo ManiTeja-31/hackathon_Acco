@@ -8,6 +8,7 @@ import { TaskListComponent } from "./components/task-list/task-list.component";
 import { ProjectDescriptionDialogComponent } from './components/project-description-dialog/project-description-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { LoginComponent } from "./components/login/login.component";
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,8 @@ import { MatIconModule } from '@angular/material/icon';
     HeaderComponent,
     SidenavMenuComponent,
     TaskListComponent,
-    MatIconModule
+    MatIconModule,
+    LoginComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
